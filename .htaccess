@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?p=$1 [NC,L]
+
+# Remove PHP version information
+#Header unset X-Powered-By Header always unset X-Powered-By
