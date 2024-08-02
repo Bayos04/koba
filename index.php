@@ -19,9 +19,9 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, PATCH, OPTIONS");
 header("Access-Control-Allow-Headers: *");
 header('Content-Type: application/json');
 
-//if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-//    exit(0);
-//}
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+   exit(0);
+}
 
 $app = AppFactory::create();
 
